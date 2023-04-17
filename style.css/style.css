@@ -24,6 +24,11 @@ ul {
   margin: 0;
   margin-bottom: 10px;
 }
+.project-features {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
 
 .wrapper {
   display: flex;
