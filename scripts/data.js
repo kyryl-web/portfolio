@@ -1,7 +1,7 @@
-export const data = {
+export const projectsData = {
   'en' : [
     {
-      id: 1,
+      id: 2,
       img: './images/project-1.jpg',
       bigImg: './images/project-1-1.jpg',
       title: 'Employees',
@@ -11,7 +11,7 @@ export const data = {
       url: 'https://kyryl-web.github.io/emp/'
     },
     {
-      id: 2,
+      id: 1,
       img: './images/project-2.jpg',
       bigImg: './images/project-2-2.png',
       title: 'Marvel information portal',
@@ -23,7 +23,7 @@ export const data = {
   ],
   'ua' : [
     {
-      id: 1,
+      id: 2,
       img: './images/project-1.jpg',
       bigImg: './images/project-1-1.jpg',
       title: 'Робітники',
@@ -32,7 +32,7 @@ export const data = {
       url: 'https://kyryl-web.github.io/emp/'
     },
     {
-      id: 2,
+      id: 1,
       img: './images/project-2.jpg',
       bigImg: './images/project-2-2.png',
       title: 'Marvel information portal',

@@ -1,4 +1,13 @@
-import {data} from "./data.js";
+import {projectsData} from "./data.js";
+
+const data = JSON.parse(JSON.stringify(projectsData));
+
+for (let key in data) {
+  console.log(data[key])
+  data[key].sort((a, b) => {
+    return a.id > b.id ? 1 : -1;
+  })
+}
 
 const content = () => {
   const main = document.querySelector('.main .container .projects');
