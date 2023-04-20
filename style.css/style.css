@@ -28,6 +28,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
+  row-gap: 10px;
+  max-width: 330px;
 }
 
 .wrapper {
@@ -145,6 +147,7 @@ ul {
 
 .projects {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -152,12 +155,15 @@ ul {
   max-width: 360px;
   animation-name: fade;
   animation-duration: 400ms;
+  display: flex;
+  flex-direction: column;
 }
 .project-content {
   padding: 10px 15px;
   border: 1px solid #a4a3a3;
   border-radius: 4px;
   background-color: #fff;
+  flex-grow: 1;
 }
 .project-img {
   width: 360px;
@@ -199,7 +205,20 @@ ul {
   width: 350px;
   height: 350px;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: zoom-in;
+  position: relative;
 }
+
+.big-img-wrapper i{
+  position: absolute;
+  z-index: 5;
+  left: 10px;
+  top: 24px;
+  font-size: 20px;
+}
+
 .big-img{
   background-size: contain;
   background-repeat: no-repeat;
@@ -209,7 +228,7 @@ ul {
 }
 
 .visit {
-  padding: 20px;
+  padding: 20px 10px 20px;
   text-align: center;
   text-decoration: none;
   display: block;
@@ -220,7 +239,7 @@ ul {
 }
 
 .visit-content{
-  max-width: 600px;
+  max-width: 630px;
 }
 
 @keyframes fade {
@@ -237,11 +256,12 @@ ul {
   min-height: 100vh;
   background-color: rgba(0,0,0, .5);
   z-index: 55;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   display: none;
   align-items: center;
+  padding: 10px 0;
 }
 
 .download{
@@ -254,7 +274,13 @@ ul {
   align-items: center;
 }
 
+.card-items .visit {
+  flex-basis: 200px;
+  display: block;
+  width: 100%;
+}
+
 .card-items a {
   height: fit-content;
-  
+  display: block;
 }

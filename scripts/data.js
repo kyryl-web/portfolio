@@ -19,11 +19,41 @@ export const projectsData = {
       Aspernatur itaque facere et repellendus sapiente nulla. Itaque exercitationem esse odio numquam excepturi deserunt debitis cum earum! Molestiae ducimus, fugiat eius eligendi ipsam hic odit quis incidunt. Nostrum, quaerat laudantium.`,
       features: ['HTML/Scss', 'React (hooks)', 'React-router', 'API', 'AJAX', 'Libs (Formik, React Transition)'],
       url: 'https://kyryl-web.github.io/marvel/'
-    }
+    },
+    {
+      id: 3,
+      img: './images/project-2.jpg',
+      bigImg: './images/project-3-3.png',
+      title: 'Food',
+      description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio inventore, beatae vero odit obcaecati debitis veniam neque maiores, provident doloribus quis sit repellendus ipsam vel non delectus velit earum id?
+      Aspernatur itaque facere et repellendus sapiente nulla. Itaque exercitationem esse odio numquam excepturi deserunt debitis cum earum! Molestiae ducimus, fugiat eius eligendi ipsam hic odit quis incidunt. Nostrum, quaerat laudantium.`,
+      features: ['HTML/Css', 'JS'],
+      url: 'https://kyryl-web.github.io/sites/en/food'
+    },
+    {
+      id: 4,
+      img: './images/project-2.jpg',
+      bigImg: './images/project-2-2.png',
+      title: 'Window',
+      description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio inventore, beatae vero odit obcaecati debitis veniam neque maiores, provident doloribus quis sit repellendus ipsam vel non delectus velit earum id?
+      Aspernatur itaque facere et repellendus sapiente nulla. Itaque exercitationem esse odio numquam excepturi deserunt debitis cum earum! Molestiae ducimus, fugiat eius eligendi ipsam hic odit quis incidunt. Nostrum, quaerat laudantium.`,
+      features: ['HTML/Css', 'JS'],
+      url: 'https://kyryl-web.github.io/sites/en/window'
+    },
+    {
+      id: 5,
+      img: './images/project-2.jpg',
+      bigImg: './images/project-2-2.png',
+      title: 'Pictures',
+      description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio inventore, beatae vero odit obcaecati debitis veniam neque maiores, provident doloribus quis sit repellendus ipsam vel non delectus velit earum id?
+      Aspernatur itaque facere et repellendus sapiente nulla. Itaque exercitationem esse odio numquam excepturi deserunt debitis cum earum! Molestiae ducimus, fugiat eius eligendi ipsam hic odit quis incidunt. Nostrum, quaerat laudantium.`,
+      features: ['HTML/Css', 'JS'],
+      url: 'https://kyryl-web.github.io/sites/en/pictures'
+    },
   ],
   'ua' : [
     {
-      id: 2,
+      id: 3,
       img: './images/project-1.jpg',
       bigImg: './images/project-1-1.jpg',
       title: 'Робітники',
@@ -39,6 +69,33 @@ export const projectsData = {
       description: `Материал из которого сделаны наши пальто прочен и долговечен. Он идеально подходит для создания модных и практичных вещей. Мы гарантируем, что наши пальто прослужат вам много сезонов, не теряя своей изначальной формы и красоты. К тому же, они также легко сочетаются с любыми другими предметами гардероба. Наша коллекция пальто включает в себя разнообразные стили, цвета и размеры, чтобы каждый мог найти идеальное пальто, которое подходит именно ему. Мы также предлагаем бесплатную доставку для всех наших покупателей, чтобы сделать процесс покупки еще более приятным.`,
       features: ['HTML', 'React', 'Redux'],
       url: 'https://kyryl-web.github.io/marvel/'
-    }
+    },
+    {
+      id: 2,
+      img: './images/project-2.jpg',
+      bigImg: './images/project-3-3.png',
+      title: 'Їжа',
+      description: `Материал из <b>которого</b> сделаны наши пальто прочен и долговечен. Он идеально подходит для создания модных и практичных вещей. Мы гарантируем, что наши пальто прослужат вам много сезонов, не теряя своей изначальной формы и красоты. К тому же, они также легко сочетаются с любыми другими предметами гардероба. Наша коллекция пальто включает в себя разнообразные стили, цвета и размеры, чтобы каждый мог найти идеальное пальто, которое подходит именно ему. Мы также предлагаем бесплатную доставку для всех наших покупателей, чтобы сделать процесс покупки еще более приятным.`,
+      features: ['HTML/Css', 'JS'],
+      url: 'https://kyryl-web.github.io/sites/ua/food'
+    },
+    {
+      id: 4,
+      img: './images/project-2.jpg',
+      bigImg: './images/project-3-3.png',
+      title: 'Вікна',
+      description: `Материал из которого сделаны наши пальто прочен и долговечен. Он идеально подходит для создания модных и практичных вещей. Мы гарантируем, что наши пальто прослужат вам много сезонов, не теряя своей изначальной формы и красоты. К тому же, они также легко сочетаются с любыми другими предметами гардероба. Наша коллекция пальто включает в себя разнообразные стили, цвета и размеры, чтобы каждый мог найти идеальное пальто, которое подходит именно ему. Мы также предлагаем бесплатную доставку для всех наших покупателей, чтобы сделать процесс покупки еще более приятным.`,
+      features: ['HTML/Css', 'JS'],
+      url: 'https://kyryl-web.github.io/sites/ua/window'
+    },
+    {
+      id: 5,
+      img: './images/project-2.jpg',
+      bigImg: './images/project-3-3.png',
+      title: 'Картини',
+      description: `Материал из которого сделаны наши пальто прочен и долговечен. Он идеально подходит для создания модных и практичных вещей. Мы гарантируем, что наши пальто прослужат вам много сезонов, не теряя своей изначальной формы и красоты. К тому же, они также легко сочетаются с любыми другими предметами гардероба. Наша коллекция пальто включает в себя разнообразные стили, цвета и размеры, чтобы каждый мог найти идеальное пальто, которое подходит именно ему. Мы также предлагаем бесплатную доставку для всех наших покупателей, чтобы сделать процесс покупки еще более приятным.`,
+      features: ['HTML/Css', 'JS'],
+      url: 'https://kyryl-web.github.io/sites/ua/pictures'
+    },
   ]
 };

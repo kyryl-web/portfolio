@@ -40,6 +40,7 @@ const content = () => {
             <ul class="project-features">
               ${list.innerHTML + `<li><a href=${hash}>...</a></li>`}
             </ul>
+            
           </div>
           <a class="visit" href=${url} target="_blank">${lang == 'en' ? 'Visit site' : 'Відвідати сторінку'}</a>
       `;
@@ -75,10 +76,10 @@ const content = () => {
       listItem.innerHTML = `${text}`;
       list.appendChild(listItem);
     })
-
+//<img class="big-img" src="${bigImg}"/>
     div.innerHTML = `
-      <div class="big-img-wrapper">
-        <img class="big-img" src="${bigImg}"/>
+      <div class="big-img-wrapper" style="background-image: url(${bigImg})">
+        <i class="fa-solid fa-magnifying-glass-plus" style="color: #000000;"></i>
       </div>
       <div class="visit-content">
         <div class="project-title">${title}</div>
@@ -95,8 +96,13 @@ const content = () => {
 
     main.appendChild(div);
 
-    document.querySelector('.big-img').addEventListener('click', (e) => {
+    document.querySelector('.big-img-wrapper').addEventListener('click', (e) => {
       const overlay = document.querySelector('.overlay');
+      let div = document.createElement('div');
+      div.style.cssText = `
+        margin: 0 auto;
+        width: 100%;
+      `;
       let img = document.createElement('img');
       img.setAttribute('src', bigImg);
       img.style.cssText = `
@@ -107,7 +113,8 @@ const content = () => {
 
       overlay.style.display = 'flex';
 
-      overlay.appendChild(img);
+      div.append(img);
+      overlay.appendChild(div);
     });
   }
 
@@ -115,7 +122,7 @@ const content = () => {
 
   overlay.addEventListener('click', (e) => {
     overlay.style.display = 'none';
-    overlay.querySelector('img').remove();
+    overlay.querySelector('div').remove();
   });
   
   window.addEventListener('popstate', (e) => {
