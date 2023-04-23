@@ -140,6 +140,8 @@ ul {
   background-color: #dbcbcb;
 }
 
+
+
 .footer {
   background-color: #000;
   height: 68px;
@@ -152,7 +154,7 @@ ul {
 }
 
 .project {
-  max-width: 360px;
+  max-width: calc(33% - 17px);
   animation-name: fade;
   animation-duration: 400ms;
   display: flex;
@@ -166,7 +168,7 @@ ul {
   flex-grow: 1;
 }
 .project-img {
-  width: 360px;
+  width: inherit;
   height: 200px;
   object-fit: cover;
   display: block;
@@ -253,7 +255,8 @@ ul {
 
 .overlay {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  /* min-height: 100vh; */
   background-color: rgba(0,0,0, .5);
   z-index: 55;
   position: absolute;
@@ -262,6 +265,19 @@ ul {
   display: none;
   align-items: center;
   padding: 10px 0;
+}
+
+.overlay div{
+  overflow-y: auto;
+  height: 700px;
+  width: 700px;
+  text-align: end;
+  margin: 0 auto;
+}
+
+.overlay div img {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .download{

@@ -2,10 +2,19 @@ import {projectsData} from "./data.js";
 
 const data = JSON.parse(JSON.stringify(projectsData));
 
+const titles = {
+  'marvel': 1,
+  'emp': 2,
+  'pictures': 3,
+  'window': 4,
+  'food': 5
+}
+
+
 for (let key in data) {
-  console.log(data[key])
   data[key].sort((a, b) => {
-    return a.id > b.id ? 1 : -1;
+    // return a.id > b.id ? 1 : -1;
+    return titles[a.code] > titles[b.code] ? 1 : -1;
   })
 }
 
@@ -99,22 +108,24 @@ const content = () => {
     document.querySelector('.big-img-wrapper').addEventListener('click', (e) => {
       const overlay = document.querySelector('.overlay');
       let div = document.createElement('div');
-      div.style.cssText = `
-        margin: 0 auto;
-        width: 100%;
-      `;
+
       let img = document.createElement('img');
       img.setAttribute('src', bigImg);
-      img.style.cssText = `
-        width: 50%;
-        display: block;
-        margin: 0 auto;
-      `;
+
+      console.log(img.offsetHeight)
+
+      
+      console.dir(img)
 
       overlay.style.display = 'flex';
 
       div.append(img);
       overlay.appendChild(div);
+      
+      if (img.offsetHeight < 700) {
+        div.style.height = img.offsetHeight + 'px';
+        div.style.overflowY = 'initial'
+      }
     });
   }
 
@@ -141,7 +152,20 @@ const content = () => {
       document.title = 'Portfolio'
     } else {
       const id = location.hash.replace(/\D/g, '');
-      generateCard(data, id, lang);
+      for (let key in titles) {
+        if (titles[key] == id) {
+          for (let obj in data) {
+            console.log(obj)
+            if (lang == obj) {
+              let cardId = data[obj].filter(item => item.code == key)[0].id;
+              generateCard(data, cardId, lang);
+              break;
+            }
+          }
+          break;
+        }
+        
+      }
     }
   }
     
