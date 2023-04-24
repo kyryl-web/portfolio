@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  let path = 'https://kyryl-web.github.io/portfolio/'; // http://127.0.0.1:5500/ //https://kyryl-web.github.io/portfolio/
+  let path = 'http://127.0.0.1:5500/'; // http://127.0.0.1:5500/ //https://kyryl-web.github.io/portfolio/
   window.path = path;
   const header = document.querySelector('header h1');
   const langsWrapper = document.querySelector('.langs-wrapper');
@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
   header.addEventListener('click', () => {
     if (location.hash !== '') {
       let hash = location.hash;
-      console.log(hash)
       if (hash != '#/') {
         history.pushState(null, null, path+'#/');
       
@@ -50,5 +49,14 @@ window.addEventListener('DOMContentLoaded', () => {
     arrow.classList.add('down');
     arrow.classList.remove('up');
     codeList.style.display = 'none';
+  })
+
+  window.addEventListener('scroll', (e) => {
+    console.log(document.documentElement.scrollTop)
+    if (document.documentElement.scrollTop > 50) {
+      document.querySelector('header').style.backgroundColor = 'rgba(0,0,0, .5)'
+    } else if (document.documentElement.scrollTop < 50) {
+      document.querySelector('header').style.backgroundColor = 'rgba(0,0,0, 1)'
+    }
   })
 })

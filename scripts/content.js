@@ -48,8 +48,7 @@ const content = () => {
             <div class="title">${lang == 'en' ? 'Features' : 'Технології'}</div>
             <ul class="project-features">
               ${list.innerHTML + `<li><a href=${hash}>...</a></li>`}
-            </ul>
-            
+            </ul>        
           </div>
           <a class="visit" href=${url} target="_blank">${lang == 'en' ? 'Visit site' : 'Відвідати сторінку'}</a>
       `;
@@ -85,7 +84,7 @@ const content = () => {
       listItem.innerHTML = `${text}`;
       list.appendChild(listItem);
     })
-//<img class="big-img" src="${bigImg}"/>
+
     div.innerHTML = `
       <div class="big-img-wrapper" style="background-image: url(${bigImg})">
         <i class="fa-solid fa-magnifying-glass-plus" style="color: #000000;"></i>
@@ -112,11 +111,6 @@ const content = () => {
       let img = document.createElement('img');
       img.setAttribute('src', bigImg);
 
-      console.log(img.offsetHeight)
-
-      
-      console.dir(img)
-
       overlay.style.display = 'flex';
 
       div.append(img);
@@ -141,8 +135,6 @@ const content = () => {
   })
 
   function checkHash() {
-
-    console.log(location.hash)
     main.innerHTML = '';
     
     let lang = localStorage.getItem('lang') || 'en';
@@ -155,7 +147,6 @@ const content = () => {
       for (let key in titles) {
         if (titles[key] == id) {
           for (let obj in data) {
-            console.log(obj)
             if (lang == obj) {
               let cardId = data[obj].filter(item => item.code == key)[0].id;
               generateCard(data, cardId, lang);
@@ -163,16 +154,13 @@ const content = () => {
             }
           }
           break;
-        }
-        
+        }     
       }
     }
   }
     
     checkHash();
     window.checkHash = checkHash;
-
-
 }
 
 

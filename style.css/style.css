@@ -14,6 +14,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: .6px;
+  background-color: #dbcbcb;
 }
 
 h1, h2 {
@@ -45,7 +46,10 @@ ul {
 }
 
 .header {
-  /* text-align: center; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #000;
   color: #fff;
 }
@@ -135,7 +139,7 @@ ul {
 
 .main {
   flex-grow: 1;
-  padding-top: 80px;
+  padding-top: 160px;
   padding-bottom: 80px;
   background-color: #dbcbcb;
 }
@@ -145,6 +149,17 @@ ul {
 .footer {
   background-color: #000;
   height: 68px;
+}
+
+.email {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.email a {
+  color: #fff;
+  
 }
 
 .projects {
@@ -256,7 +271,6 @@ ul {
 .overlay {
   width: 100%;
   height: 100vh;
-  /* min-height: 100vh; */
   background-color: rgba(0,0,0, .5);
   z-index: 55;
   position: absolute;
