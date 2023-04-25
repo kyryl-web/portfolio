@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  let path = 'http://127.0.0.1:5500/'; // http://127.0.0.1:5500/ //https://kyryl-web.github.io/portfolio/
+  let path = 'https://kyryl-web.github.io/portfolio/'; // http://127.0.0.1:5500/ //https://kyryl-web.github.io/portfolio/
   window.path = path;
   const header = document.querySelector('header h1');
   const langsWrapper = document.querySelector('.langs-wrapper');
@@ -52,7 +52,6 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   window.addEventListener('scroll', (e) => {
-    console.log(document.documentElement.scrollTop)
     if (document.documentElement.scrollTop > 50) {
       document.querySelector('header').style.backgroundColor = 'rgba(0,0,0, .5)'
     } else if (document.documentElement.scrollTop < 50) {

@@ -13,7 +13,6 @@ const titles = {
 
 for (let key in data) {
   data[key].sort((a, b) => {
-    // return a.id > b.id ? 1 : -1;
     return titles[a.code] > titles[b.code] ? 1 : -1;
   })
 }
